@@ -6,4 +6,13 @@
 
     <display-name>Java EE Application</display-name>
 
+    <servlet>
+        <servlet-name>XmlServlet</servlet-name>
+        <servlet-class>cz.sohlich.servlet.XmlServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>XmlServlet</servlet-name>
+        <url-pattern>/xml</url-pattern>
+    </servlet-mapping>
 </web-app>
