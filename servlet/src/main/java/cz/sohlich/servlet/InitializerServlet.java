@@ -19,9 +19,9 @@ public class InitializerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.info("Getting request");
+        log.info("Receiving request");
         try (PrintWriter wr = resp.getWriter()) {
-            wr.write("xml");
+            wr.write("initializer");
         }
     }
 }
