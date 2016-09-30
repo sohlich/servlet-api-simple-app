@@ -16,7 +16,8 @@ import java.io.IOException;
  *
  * Created by Radomir Sohlich on 9/30/16.
  */
-@WebFilter(filterName = "AnnotationFilter", urlPatterns = "/*")
+@WebFilter(filterName = "AnnotationFilter", urlPatterns = "/*", asyncSupported
+        = true)
 public class AnnotationFilter extends SimpleFilterBase {
 
 

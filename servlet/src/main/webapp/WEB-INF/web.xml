@@ -27,6 +27,7 @@
     <filter>
         <filter-name>XmlFilter</filter-name>
         <filter-class>cz.sohlich.filter.XmlFilter</filter-class>
+        <async-supported>true</async-supported>
     </filter>
 
     <filter-mapping>

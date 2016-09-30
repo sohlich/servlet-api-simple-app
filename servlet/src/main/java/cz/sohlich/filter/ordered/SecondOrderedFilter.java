@@ -12,7 +12,8 @@ import java.io.IOException;
 /**
  * Created by Radomir Sohlich on 9/30/16.
  */
-@WebFilter(filterName = "SecondFilter")
+@WebFilter(filterName = "SecondFilter", asyncSupported
+        = true)
 public class SecondOrderedFilter extends SimpleFilterBase {
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {

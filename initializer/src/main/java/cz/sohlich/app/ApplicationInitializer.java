@@ -3,6 +3,7 @@ package cz.sohlich.app;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -33,9 +34,10 @@ public class ApplicationInitializer implements ServletContainerInitializer {
                 .addMapping("/initializer");
 
         //Filter registration
-        ctx.addFilter("InitializerFilter", "cz.sohlich.filter" +
-                ".InitializerFilter").addMappingForUrlPatterns(null, true,
-                "/*");
+        FilterRegistration.Dynamic filter = ctx.addFilter("InitializerFilter",
+                "cz.sohlich.filter.InitializerFilter");
+        filter.addMappingForUrlPatterns(null, true, "/*");
+        filter.setAsyncSupported(true);
 
 
     }
