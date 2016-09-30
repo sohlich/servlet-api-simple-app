@@ -18,7 +18,10 @@ import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * Asynchronous API demo.
+ * All filters in url path must support
+ * asynchronous processing.
  * <p>
+ *
  * Created by Radomir Sohlich on 9/30/16.
  */
 @WebServlet(urlPatterns = "/async", asyncSupported = true)
