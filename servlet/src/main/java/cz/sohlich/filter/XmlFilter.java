@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * XmlFilter is registered to servlet context in WEB-INF/web.xml
+ * descriptor.
+ *
+ *
  * Created by Radomir Sohlich on 9/30/16.
  */
 public class XmlFilter extends SimpleFilterBase {

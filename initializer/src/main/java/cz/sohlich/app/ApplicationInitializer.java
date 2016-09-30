@@ -9,6 +9,12 @@ import javax.servlet.ServletException;
 import java.util.Set;
 
 /**
+ * ApplicationInitializer is demo implementation of
+ * {@link ServletContainerInitializer} interface.
+ * The implementation must be also exposed via
+ * META-INF/services/javax.servlet.ServletContainerInitializer
+ * file.
+ *
  * Created by Radomir Sohlich on 9/29/16.
  */
 public class ApplicationInitializer implements ServletContainerInitializer {
@@ -21,17 +27,16 @@ public class ApplicationInitializer implements ServletContainerInitializer {
 
         log.info("######### APPLICATION CONFIG ##########");
 
+        //Servlet registration
         ctx.addServlet("InitializerServlet",
                 "cz.sohlich.servlet.InitializerServlet")
                 .addMapping("/initializer");
 
-        log.info("InitializerServlet registered");
-
+        //Filter registration
         ctx.addFilter("InitializerFilter", "cz.sohlich.filter" +
                 ".InitializerFilter").addMappingForUrlPatterns(null, true,
                 "/*");
 
-        log.info("InitializerFilter registered");
 
     }
 }

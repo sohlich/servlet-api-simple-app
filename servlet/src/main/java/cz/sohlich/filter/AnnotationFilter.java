@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * AnnotationFilter is an implementation of the simpliest way how to register
+ * filter to servlet context.
+ *
+ *
  * Created by Radomir Sohlich on 9/30/16.
  */
 @WebFilter(filterName = "AnnotationFilter", urlPatterns = "/*")

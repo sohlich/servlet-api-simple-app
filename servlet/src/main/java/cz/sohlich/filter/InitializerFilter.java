@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * InitializerFilter registered in context by
+ * {@link cz.sohlich.app.ApplicationInitializer}.
+ *
  * Created by Radomir Sohlich on 9/30/16.
  */
 public class InitializerFilter extends SimpleFilterBase {
