@@ -19,11 +19,19 @@ public class ApplicationInitializer implements ServletContainerInitializer {
     public void onStartup(Set<Class<?>> set, ServletContext ctx) throws
             ServletException {
 
-        log.info("######### APPLICATION INITIALIZED ##########");
+        log.info("######### APPLICATION CONFIG ##########");
 
         ctx.addServlet("InitializerServlet",
                 "cz.sohlich.servlet.InitializerServlet")
                 .addMapping("/initializer");
+
+        log.info("InitializerServlet registered");
+
+        ctx.addFilter("InitializerFilter", "cz.sohlich.filter" +
+                ".InitializerFilter").addMappingForUrlPatterns(null, true,
+                "/*");
+
+        log.info("InitializerFilter registered");
 
     }
 }
